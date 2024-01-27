@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1"/>	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="icon" type="image/png" href="https://www.jpmotors.com.gt/images/favico.png">
+
+	<title>Autos Usados | Jp Motors, Guatemala</title>
+	<meta name="description" content="Agencia de venta de vehículos nuevos y usados con más de 38 años de experiencia. Te asesoramos en tu compra y te ofrecemos las mejores facilidades de pago para que puedas adquirir tu vehículo."/>
+	<!-- SHARE FACEBOOK -->
+	<meta property="og:url"           content="https://www.jpmotors.com.gt/usados" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="JP Motors Guatemala"/>
+	<meta property="og:description"   content="Agencia de venta de vehículos nuevos y usados con más de 38 años de experiencia. Te asesoramos en tu compra y te ofrecemos las mejores facilidades de pago para que puedas adquirir tu vehículo." />
+	<meta property="og:image"         content="https://www.jpmotors.com.gt/images/fb-img-share.png" />
+	<!-- Agregar descripción de la página web	 -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/slide.css"></head>
+<body>	
+	<header class="no-print">
+	<div class="content">
+	<div class="row header">
+		<div class="col-md-2 col-xs-6 text-left logo">
+			<img src="images/Imagen_Principal.jpg" alt="Logo Autos Jack" onclick="window.open('index.html', '_self');" style="cursor: pointer;">
+		</div>
+		<div class="col-md-2 col-xs-6 text-right desde" style="padding: 0px; ">
+			<span style="font-size: 1.5em; display: block; font-weight: 300; padding-top: 20px;" class="text-right">¡Desde 1981! </span>
+
+		</div>
+		<div class="col-md-6 col-xs-12 menu no-print">
+			<div class="menu-movil" id="Menu">
+				<i class="fas fa-bars"></i> MENÚ
+			</div>
+			<div class="menu-top">
+				<div class="sub-menu">
+					<ul>
+						<li><a href="index.html" >Inicio</a></li><li><a href="#" >Nosotros</a></li><li><a href="usados.html" class="activo">Usados</a></li><li><a href="nuevos.html" >Nuevos</a></li><li><a href="contactenos.html" >Contáctenos</a></li>					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 col-xs-12 menu hidden-xs no-print" style="padding: 0px;">
+			<div class="sub-menu info text-right" style="background-color: #313131; color: #fff; padding-right: 20px; padding-left: 10px;">
+				(502) 3355 - 4285 <br>
+				info@jpmotors.com.gt
+			</div>						
+		</div>
+	</div>
+	</div>
+</header>
+
+<div id="preloader">
+   	<div id="loader">
+ 		<p>Cargando...</p>
+   	</div>
+</div>
+	<section class="sub-header autos-nuevos">
+		<div class="bg-black">
+			<div class="content">
+				<h1>Autos Usados</h1>
+			</div>
+		</div>
+	</section>
+
+	<div class="content-main">
+		
+		<div style="padding: 10px;">
+			<p class="text-center"><b>Puedes filtrar los vehículos desplegados por marca y línea.</b></p>							
+		</div>
+
+		<div style="padding: 10px 20px 15px 20px; border: #eee 2px solid; margin: 0 auto; max-width: 900px;">
+			<form class="form" action="autos-usados" id="buscar_auto">
+				<div class="row">
+					<div class="col-md-4 col-xs-12 text-left">
+						<label>Filtrar por marca:</label>
+						<select class="form-control" id="Marca" name="marca" required="">
+							<option value="all" selected="">-- Últimos vehículos ingresados --</option>
+							<option value="45">A BLINDADOS</option> <option value="10">BMW</option> <option value="3">CHEVROLET</option> <option value="21">CITROEN</option> <option value="36">FIAT</option> <option value="32">FUSO</option> <option value="24">HONDA</option> <option value="13">HYUNDAI</option> <option value="25">JEEP</option> <option value="9">KIA</option> <option value="39">LAND ROVER</option> <option value="14">MAZDA</option> <option value="38">MERCEDES-BENZ</option> <option value="41">MINI</option> <option value="26">MITSUBISHI</option> <option value="2">NISSAN</option> <option value="44">SSANG YONG </option> <option value="1">TOYOTA</option> <option value="11">VOLKSWAGEN</option> <option value="16">VOLVO</option> 						</select>
+					</div>
+
+					<div class="col-md-4 col-xs-12 text-left">
+						<label>Filtrar por línea:</label>
+						<select class="form-control linea" id="Linea" name="linea" disabled>
+							<option value="all" default="">-- Todas las líneas --</option>
+						</select>
+					</div>
+
+					<div class="col-md-4 col-xs-12 text-left">
+						<label>Ordenar por:</label>
+						<select class="form-control" id="Orden"  name="orden">
+							<option value="precio" default="">Precio (mayor a menor)</option>
+							<option value="modelo" >Modelo</option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<br>
+		<h2 class="text-center light text-uppercase">Últimos vehículos agregados</h2>
+		<div style="max-width: 70%; margin: 0 auto; margin-bottom: 30px; ">		
+			<hr>
+		</div>				
+			
+
+		<div class="catalogo-autos">			
+			<div class="row listado-vehiculos-usados">
+			
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25221604', '_self');">
+						<div class="precio">Q. 104,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/yaris3790-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>TOYOTA  • YARIS  2015</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									1497
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2015
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									123,600
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25215838', '_self');">
+						<div class="precio">Q. 174,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/amarok2510-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>VOLKSWAGEN  • AMAROK 2016</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									2000
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2016
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									110,300
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25212153', '_self');">
+						<div class="precio">Q. 49,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/ODYSSEY2560-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>HONDA  • ODYSSEY EX 2005</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									3471
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2005
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									60,600
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><div class="col-md-12 col-xs-12"></div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25212405', '_self');">
+						<div class="precio">Q. 75,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/odyssey2140-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>HONDA  • ODYSSEY 2012</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									3500
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2012
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									114,400
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25184224', '_self');">
+						<div class="precio">Q. 114,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/cherokee0980-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>JEEP  • grand CHEROKEE LIMITED  2012</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									5700
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2012
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									80,000
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25152707', '_self');">
+						<div class="precio">Q. 49,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/corolla8530-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>TOYOTA  • COROLLA 2004 </a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									1794
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2004
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									290,000
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><div class="col-md-12 col-xs-12"></div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25141526', '_self');">
+						<div class="precio">Q. 189,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/canter8980-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>FUSO  • CANTER FE85  2022</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									3907
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2022
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									124,100
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=25141559', '_self');">
+						<div class="precio">Q. 344,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/4runner1200-jpg.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>   TOYOTA  •  4RUNNER 2019</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									3956
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2019
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									50,200
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=2583200', '_self');">
+						<div class="precio">Q. 125,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/santafe3310.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>HYUNDAI  • SANTA FE 2017</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									2400
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2017
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									119,000
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><div class="col-md-12 col-xs-12"></div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=2582843', '_self');">
+						<div class="precio">Q. 49,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/space9670.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>MITSUBISHI • SPACE WAGON GLX 2002</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									2351
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2002
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									127,000
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=2583817', '_self');">
+						<div class="precio">Q. 134,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/qashqai2280.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>NISSAN  • QASHQAI 2018</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									2000
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2018
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									48,200
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-md-4 col-xs-12" >
+					<div class="auto-nuevo" onclick="window.open('auto-usado.html?codigo=2571333', '_self');">
+						<div class="precio">Q. 149,900.00</div>
+						<div class="imagen-auto" style="background-image: url('upload/files/thumbnail/touareg5050.png '); background-size: cover; background-position: center !important;"></div>
+						<div class="texto">
+							<h3>VOLKSWAGEN • TOUAREG 2013</a>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-bolt"></i> <strong>Motor</strong><br>
+									3000
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fas fa-gas-pump"></i> <strong>Modelo</strong><br>
+									2013
+								</div>
+
+								<div class="col-md-4 col-xs-4 texto-info">
+									<i class="fa fa-car"></i> <strong>Km</strong><br>
+									60,300
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><div class="col-md-12 col-xs-12"></div>            </div>
+		</div>	
+	</div>
+
+<div class="whatsapp-button">
+	<span>¿Cómo podemos ayudarte?</span>
+	<img src="images/whatsapp-button.png" onclick="window.open('https://api.whatsapp.com/send?phone=50233554285&text=%c2%a1Hola%21%2c%20me%20gustar%c3%ada%20consultar%20informaci%c3%b3n%20acerca%20de%20un%20veh%C3%ADculo.');">
+</div>
+
+<footer class="no-print">
+	<div class="content">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Jp Motors Guatemala</h4>
+				<p>Más de 43 años de experiencia. Te asesoramos en tu compra y te ofrecemos las mejores facilidades de pago para que puedas adquirir tu vehículo.</p>
+				<p><span class="fas fa-map-marker-alt"></span> 6 Av 8-08 Zona 4 Guatemala, Centro América</p>
+				<p><span class="fas fa-phone"></span> (502) 3355 - 4285</p>
+				<p><span class="far fa-envelope"></span>info@jpmotors.com.gt</p>
+			</div>
+			<div class="col-md-6">
+				<h4>¿Cómo llegar a la agencia?</h4>
+				<div class="row">
+					<div class="col-md-8">						
+						<a href="https://ul.waze.com/ul?ll=16.92115066%2C-89.89198781&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank"><img src="images/map-waze-ubicacion-superautosjack.png" alt="Como llegar a la agencia?" class="img-responsive" ></a>						
+					</div>
+					<div class="col-md-4 text-center siguenos">
+						<h6>Siguenos</h6>
+						<span class="fab fa-facebook-square" onclick="window.open('https://www.facebook.com/jpmotors/','_blank');"></span>
+						<span class="fab fa-instagram" onclick="window.open('https://www.instagram.com/jpmotors/','_blank');"></span>
+						<span class="fab fa-whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=50253899639&text=%c2%a1Hola%21%2c%20me%20gustar%c3%ada%20consultar%20informaci%c3%b3n%20acerca%20de%20un%20vehículo.','_blank');"></span>
+						<span class="fab fa-waze" onclick="window.open('https://www.waze.com/es/live-map/directions?navigate=yes&to=ll.16.92034862%2C-89.89081264&from=place.ChIJXz9EVSGNX48RcqljlU4KcAA&utm_medium=lm_share_directions&utm_campaign=default&utm_source=waze_website','_blank');"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<section class="footer no-print">
+	<div class="content">
+		<div class="row">
+			<div class="col-md-6 col-xs-12">
+				<p>Copyright Jp Motors 2024 | Guatemala, Centro América</p>
+			</div>
+			<div class="col-md-6 col-xs-12 text-right">
+				<p>Desarrollado por <a href="https://github.com/EAR1610" target="blank"> FalconX</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var demo1 = $("#Sliderjpmotors").slippry({
+			transition: 'fade',
+			preload: 'visible',
+	        start: 'random',
+			autoHover: false
+		});				
+	});
+</script>
+
+<script type="text/javascript">
+    $("#Menu").click(function(){ 
+    	$(".menu-top").slideToggle(300);                           
+    }); 	        
+</script>
+
+<!-- ALERTAS EMERGENTES -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+	function exito(string){
+		Swal.fire({
+		  position: 'center',
+		  type: 'success',
+		  html: string,
+		  showConfirmButton: false,
+		  timer: 8000
+		})
+	}
+
+	function error(string){
+		Swal.fire({
+		  position: 'center',
+		  type: 'error',
+		  html: string,
+		  showConfirmButton: false,
+		  timer: 8000
+		})
+	}
+
+	function enviar_datos(event){
+		Swal.fire({
+		  position: 'center',
+		  type: 'info',
+		  title: 'Solicitud de cotización',
+		  html: 'Este metodo requiere de mayor tiempo de espera para poder generar una cotización y posteriormente enviarla por email. El proceso puede tardar hasta 24 horas.',
+		  showConfirmButton: true
+		})
+		
+		return false;
+	}
+		
+</script>
+<script src="js/validar_datos.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104097960-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-104097960-3');
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#Marca, #Orden").change(function(){ 
+    	$("#preloader").show();
+    	document.getElementById("Linea").disabled = true;		
+
+		//Cargar lineas disponibles de vehiculos
+        var url = "action/buscar-linea.php?web"; 
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#buscar_auto").serialize(),
+            success: function(data)
+            {      
+                document.getElementById("Linea").disabled = false;     
+                $(".linea").html(data);       
+            }
+        });
+
+        //Carga de vehículos correspondientes a la marca
+        var url = "page/vehiculos-marca.php"; 
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#buscar_auto").serialize(),
+            success: function(data)
+            {          
+            	$("#preloader").hide(); 
+                $(".catalogo-autos").html(data);       
+                    
+            }
+        });                  
+        return false;
+    });  
+
+
+
+    $("#Linea").change(function(){ 
+    	$("#preloader").show();
+
+        var url = "page/vehiculos-marca.php"; 
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#buscar_auto").serialize(),
+            success: function(data)
+            {          
+            	$("#preloader").hide(); 
+                $(".catalogo-autos").html(data);       
+                    
+            }
+        }); 
+                         
+        return false;
+    }); 
+
+});   
+</script>
+</body>
+</html>

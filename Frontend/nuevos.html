@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1"/>  
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/png" href="https://www.jpmotors.com.gt/images/favico.png">
+
+    <title>Autos Nuevos | Jp Motors, Guatemala</title>
+    <meta name="description" content="Agencia de venta de vehículos nuevos y usados con más de 38 años de experiencia. Te asesoramos en tu compra y te ofrecemos las mejores facilidades de pago para que puedas adquirir tu vehículo."/>
+    <!-- SHARE FACEBOOK -->
+    <meta property="og:url"           content="https://www.jpmotors.com.gt/nuevos" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Jp Motors, Guatemala"/>
+    <meta property="og:description"   content="Agencia de venta de vehículos nuevos y usados con más de 38 años de experiencia. Te asesoramos en tu compra y te ofrecemos las mejores facilidades de pago para que puedas adquirir tu vehículo." />
+    <meta property="og:image"         content="https://www.jpmotors.com.gt/images/fb-img-share.png" />
+
+    <!-- Agregar descripción de la página web    -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/slide.css"></head>
+<body>  
+    <header class="no-print">
+	<div class="content">
+	<div class="row header">
+		<div class="col-md-2 col-xs-6 text-left logo">
+			<img src="images/Imagen_Principal.jpg" alt="Logo Autos Jack" onclick="window.open('index.html', '_self');" style="cursor: pointer;">
+		</div>
+		<div class="col-md-2 col-xs-6 text-right desde" style="padding: 0px; ">
+			<span style="font-size: 1.5em; display: block; font-weight: 300; padding-top: 20px;" class="text-right">¡Desde 1981! </span>
+
+		</div>
+		<div class="col-md-6 col-xs-12 menu no-print">
+			<div class="menu-movil" id="Menu">
+				<i class="fas fa-bars"></i> MENÚ
+			</div>
+			<div class="menu-top">
+				<div class="sub-menu">
+					<ul>
+						<li><a href="index.html" >Inicio</a></li><li><a href="#" >Nosotros</a></li><li><a href="usados.html" >Usados</a></li><li><a href="nuevos.html" class="activo">Nuevos</a></li><li><a href="contactenos.html" >Contáctenos</a></li>					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 col-xs-12 menu hidden-xs no-print" style="padding: 0px;">
+			<div class="sub-menu info text-right" style="background-color: #313131; color: #fff; padding-right: 20px; padding-left: 10px;">
+				(502) 3355 - 4285 <br>
+				info@jpmotors.com.gt
+			</div>						
+		</div>
+	</div>
+	</div>
+</header>
+
+<div id="preloader">
+   	<div id="loader">
+ 		<p>Cargando...</p>
+   	</div>
+</div>
+    <section class="sub-header autos-nuevos">
+        <div class="bg-black">
+            <div class="content">
+                <h1>Autos Nuevos</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="content-main">
+        <div style="padding: 10px;">
+            <p class="text-center"><b>Puedes filtrar los vehículos desplegados por marca y línea.</b></p>                           
+        </div>
+
+        <div style="padding: 10px 20px 15px 20px; border: #eee 2px solid; margin: 0 auto; max-width: 750px;">
+            <form class="form" action="autos-usados" id="buscar_auto">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 text-left">
+                        <label>Filtrar por marca:</label>
+                        <select class="form-control" id="Marca" name="marca" required="">
+                            <option value="all" selected="">-- Últimos vehículos ingresados --</option>
+                            <option value="10">BMW</option> <option value="37">CHANGAN</option> <option value="3">CHEVROLET</option> <option value="53">DFSK</option> <option value="19">FORD</option> <option value="32">FUSO</option> <option value="49">HAVAL</option> <option value="24">HONDA</option> <option value="31">ISUZU</option> <option value="9">KIA</option> <option value="33">LEXUS</option> <option value="22">MAHINDRA</option> <option value="14">MAZDA</option> <option value="38">MERCEDES-BENZ</option> <option value="26">MITSUBISHI</option> <option value="2">NISSAN</option> <option value="17">RENAULT</option> <option value="29">SUBARU</option> <option value="15">SUZUKI</option> <option value="1">TOYOTA</option>                         </select>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 text-left">
+                        <label>Filtrar por línea:</label>
+                        <select class="form-control linea" id="Linea" name="linea" disabled>
+                            <option value="all" default="">-- Todas las líneas --</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div> 
+
+        <br>
+        <h2 class="text-center light text-uppercase">Últimos vehículos agregados</h2>
+        <div style="max-width: 70%; margin: 0 auto; margin-bottom: 30px; ">     
+            <hr>
+        </div>  
+
+        <div class="catalogo-autos">            
+            <div class="row listado-vehiculos-usados">
+            <div class="col-md-4 col-xs-12" >
+                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=-1235113', '_self');">
+                    
+                    <div class="imagen-auto" style="background-image: url('upload/files/thumbnail/NUEVALINEA (2).png '); background-size: cover; background-position: center !important;"></div>
+                    <div class="texto">
+                        <h3>TOYOTA PRADO VX 2.8L</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6 texto-info">
+                                <i class="fas fa-info-circle"></i> <strong>Código: </strong>                                
+                            </div>
+                            <div class="col-md-6 col-xs-6 texto-info">
+                                GDVX
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-4 col-xs-12" >
+                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=-1224926', '_self');">
+                    
+                    <div class="imagen-auto" style="background-image: url('upload/files/thumbnail/X1 (1).jpg '); background-size: cover; background-position: center !important;"></div>
+                    <div class="texto">
+                        <h3>BMW X1 sDrive18i Deluxe</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6 texto-info">
+                                <i class="fas fa-info-circle"></i> <strong>Código: </strong>                                
+                            </div>
+                            <div class="col-md-6 col-xs-6 texto-info">
+                                Deluxe2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-4 col-xs-12" >
+                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=-1225821', '_self');">
+                    
+                    <div class="imagen-auto" style="background-image: url('upload/files/thumbnail/NUEVALINEA (1).png '); background-size: cover; background-position: center !important;"></div>
+                    <div class="texto">
+                        <h3>TOYOTA PRADO 2.8L Automática</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6 texto-info">
+                                <i class="fas fa-info-circle"></i> <strong>Código: </strong>                                
+                            </div>
+                            <div class="col-md-6 col-xs-6 texto-info">
+                                GDP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-12 col-xs-12"></div><div class="col-md-4 col-xs-12" >
+                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=-1181359', '_self');">
+                    
+                    <div class="imagen-auto" style="background-image: url('upload/files/thumbnail/NUEVALINEA.png '); background-size: cover; background-position: center !important;"></div>
+                    <div class="texto">
+                        <h3>TOYOTA PRADO Intermedia First Edition</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6 texto-info">
+                                <i class="fas fa-info-circle"></i> <strong>Código: </strong>                                
+                            </div>
+                            <div class="col-md-6 col-xs-6 texto-info">
+                                GDFE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-4 col-xs-12" >
+                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=-1174409', '_self');">
+                    
+                    <div class="imagen-auto" style="background-image: url('upload/files/thumbnail/BOTON USADOS (6)etrend.png '); background-size: cover; background-position: center !important;"></div>
+                    <div class="texto">
+                        <h3>FORD EVEREST Trend 2.0 </a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6 texto-info">
+                                <i class="fas fa-info-circle"></i> <strong>Código: </strong>                                
+                            </div>
+                            <div class="col-md-6 col-xs-6 texto-info">
+                                TREND XLT 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-4 col-xs-12" >
+                <div class="auto-nuevo" onclick="window.open('auto-nuevo?codigo=-1162449', '_self');">
+                    
+                    <div class="imagen-auto" style="background-image: url('upload/files/thumbnail/HILUXCV.jpg '); background-size: cover; background-position: center !important;"></div>
+                    <div class="texto">
+                        <h3>TOYOTA HI LUX 2.8 AT FULL Cuero y Kit de Accesorios</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6 texto-info">
+                                <i class="fas fa-info-circle"></i> <strong>Código: </strong>                                
+                            </div>
+                            <div class="col-md-6 col-xs-6 texto-info">
+                                B9/
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            </div>
+        </div>  
+    </div>
+
+    <div class="whatsapp-button">
+	<span>¿Cómo podemos ayudarte?</span>
+	<img src="images/whatsapp-button.png" onclick="window.open('https://api.whatsapp.com/send?phone=50233554285&text=%c2%a1Hola%21%2c%20me%20gustar%c3%ada%20consultar%20informaci%c3%b3n%20acerca%20de%20un%20veh%C3%ADculo.');">
+</div>
+
+<footer class="no-print">
+	<div class="content">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Jp Motors Guatemala</h4>
+				<p>Más de 43 años de experiencia. Te asesoramos en tu compra y te ofrecemos las mejores facilidades de pago para que puedas adquirir tu vehículo.</p>
+				<p><span class="fas fa-map-marker-alt"></span> 6 Av 8-08 Zona 4 Guatemala, Centro América</p>
+				<p><span class="fas fa-phone"></span> (502) 3355 - 4285</p>
+				<p><span class="far fa-envelope"></span> info@jpmotors.com.gt</p>
+			</div>
+			<div class="col-md-6">
+				<h4>¿Cómo llegar a la agencia?</h4>
+				<div class="row">
+					<div class="col-md-8">						
+						<a href="https://ul.waze.com/ul?ll=16.92115066%2C-89.89198781&navigate=yes&zoom=17&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank"><img src="images/map-waze-ubicacion-superautosjack.png" alt="Como llegar a la agencia?" class="img-responsive" ></a>						
+					</div>
+					<div class="col-md-4 text-center siguenos">
+						<h6>Siguenos</h6>
+						<span class="fab fa-facebook-square" onclick="window.open('https://www.facebook.com/jpmotors/','_blank');"></span>
+						<span class="fab fa-instagram" onclick="window.open('https://www.instagram.com/jpmotors/','_blank');"></span>
+						<span class="fab fa-whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=50233554285&text=%c2%a1Hola%21%2c%20me%20gustar%c3%ada%20consultar%20informaci%c3%b3n%20acerca%20de%20un%20vehículo.','_blank');"></span>
+						<span class="fab fa-waze" onclick="window.open('https://www.waze.com/es/live-map/directions?navigate=yes&to=ll.16.92034862%2C-89.89081264&from=place.ChIJXz9EVSGNX48RcqljlU4KcAA&utm_medium=lm_share_directions&utm_campaign=default&utm_source=waze_website','_blank');"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<section class="footer no-print">
+	<div class="content">
+		<div class="row">
+			<div class="col-md-6 col-xs-12">
+				<p>Copyright Jp Motors 2024 | Guatemala, Centro América</p>
+			</div>
+			<div class="col-md-6 col-xs-12 text-right">
+				<p>Desarrollado por <a href="https://github.com/EAR1610" target="blank">FalconX</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var demo1 = $("#Sliderjpmotors").slippry({
+			transition: 'fade',
+			preload: 'visible',
+	        start: 'random',
+			autoHover: false
+		});				
+	});
+</script>
+
+<script type="text/javascript">
+    $("#Menu").click(function(){ 
+    	$(".menu-top").slideToggle(300);                           
+    }); 	        
+</script>
+
+<!-- ALERTAS EMERGENTES -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+	function exito(string){
+		Swal.fire({
+		  position: 'center',
+		  type: 'success',
+		  html: string,
+		  showConfirmButton: false,
+		  timer: 8000
+		})
+	}
+
+	function error(string){
+		Swal.fire({
+		  position: 'center',
+		  type: 'error',
+		  html: string,
+		  showConfirmButton: false,
+		  timer: 8000
+		})
+	}
+
+	function enviar_datos(event){
+		Swal.fire({
+		  position: 'center',
+		  type: 'info',
+		  title: 'Solicitud de cotización',
+		  html: 'Este metodo requiere de mayor tiempo de espera para poder generar una cotización y posteriormente enviarla por email. El proceso puede tardar hasta 24 horas.',
+		  showConfirmButton: true
+		})
+		
+		return false;
+	}
+		
+</script>
+<script src="js/validar_datos.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104097960-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-104097960-3');
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#Marca, #Orden").change(function(){ 
+        $("#preloader").show();
+        document.getElementById("Linea").disabled = true;       
+
+        //Cargar lineas disponibles de vehiculos
+        var url = "action/buscar-linea-nuevo.php?web"; 
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#buscar_auto").serialize(),
+            success: function(data)
+            {      
+                document.getElementById("Linea").disabled = false;     
+                $(".linea").html(data);       
+            }
+        });
+
+        //Carga de vehículos correspondientes a la marca
+        var url = "page/vehiculos-marca-nuevos.php"; 
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#buscar_auto").serialize(),
+            success: function(data)
+            {          
+                $("#preloader").hide(); 
+                $(".listado-vehiculos-usados").html(data);       
+                    
+            }
+        });                  
+        return false;
+    });  
+
+
+
+    $("#Linea").change(function(){ 
+        $("#preloader").show();
+       
+        var url = "page/vehiculos-marca-nuevos.php"; 
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#buscar_auto").serialize(),
+            success: function(data)
+            {          
+                $("#preloader").hide(); 
+                $(".listado-vehiculos-usados").html(data);       
+                    
+            }
+        }); 
+                         
+        return false;
+    }); 
+
+});   
+</script>
+</body>
+</html>

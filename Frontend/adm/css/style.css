@@ -261,8 +261,15 @@ section#login{
 	}
 
 
-/*---------------------*/
+/* SECTION NAVBAR */
+.logo-header > img {
+	max-width: 150px;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
+/*---------------------*/
 
 /*SECTION INFO*/
 #info{

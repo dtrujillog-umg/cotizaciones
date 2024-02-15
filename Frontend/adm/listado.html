@@ -5,21 +5,19 @@
 		<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=10">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Panel de administración | Super Autos Jack</title>	
+	<title>Panel de administración | Jp Motors</title>	
 
 	
 	<!-- FUENTES GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600&display=swap" rel="stylesheet"> 	
+	<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >	 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">	
 	<link rel="stylesheet" type="text/css" href="css/style.css?ref=2401">		
 	<link rel="stylesheet" type="text/css" href="css/design-color.css?ref=2401">	
 	<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">	
 	<link rel="stylesheet" type="text/css" href="css/print.css?ref=2401" media="print">
 	<link rel="stylesheet" type="text/css" href="../upload/jquery.fileupload.css">
-
-	<!-- AWESOME FONT ICONS -->
-	<link rel="stylesheet" type="text/css" href="css/awesomeFont.css">	
 
 	<!-- SCRIPT JQUERY -->
 	<script src="js/jquery-1.11.1.min.js"></script>	
@@ -54,38 +52,36 @@
 <header>	
 	<div class="contenedor-header">
 		<div class="logo-header">
-			<img src="images/logo.png" alt="Logo principal" class="img-responsive">
+			<img src="images/Imagen_Principal.jpg" alt="Logo principal" class="img-responsive">
 		</div>
 
 		<div class="menu-header">
 			<nav>
 				<ul class="menu-nav">
-					<li><a href="index"><i class="fas fa-home"></i> Inicio</a></li>
-
-										<li><a href="calendario?i=general"><i class="far fa-calendar-alt"></i> Calendario</a></li>
+					<li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+						<li><a href="calendario.html"><i class="far fa-calendar-alt"></i> Calendario</a></li>
 					<li>
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-id-card"></i>  Cartera <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="cartera?i=activa">Activa</a></li>
-							<li><a href="cartera?i=cerrada">Cerrada</a></li>
-							<li><a href="cartera?i=caida">Caída</a></li>
-							<li><a href="cartera?i=terminada">Terminada</a></li>
+							<li><a href="cartera.html">Activa</a></li>
+							<li><a href="cartera.html">Cerrada</a></li>
+							<li><a href="cartera.html">Caída</a></li>
+							<li><a href="cartera.html">Terminada</a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-car"></i>  Vehículos <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="listado?i=usados">Usados</a></li>
-							<li><a href="listado?i=nuevos">Nuevos</a></li>
+						<ul class="dropdown-menu">							
+							<li><a href="listado.html">Nuevos</a></li>
 						</ul>
 					</li>				
 					
 					
-					<li><a href="#" class="dropdown-toggle activo" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i>  paolarosado  <span class="caret"></span></a>
+					<li><a href="#" class="dropdown-toggle activo" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i>  diegotrujillo  <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="usuario?i=password">Cambiar contraseña</a></li>
+						<li><a href="usuario.html">Cambiar contraseña</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="login?ref=logout">Cerrar sesión</a></li>
+						<li><a href="login.html">Cerrar sesión</a></li>
 					</ul></li>
 				</ul>
 			</nav>
@@ -97,8 +93,8 @@
 <div class="contenido autos-usados">
 	<div class="row">
 		<div class="col-sm-2 padding-top-10">
-			<a href="index" class="btn btn-default" style="font-size: 1.1em; margin-right: 7px;"><i class="fas fa-chevron-left"></i></a>
-			<a href="index" class="btn btn-default" style="font-size: 1.1em;"><i class="fas fa-home"></i></a>
+			<a href="index.html" class="btn btn-default" style="font-size: 1.1em; margin-right: 7px;"><i class="fas fa-chevron-left"></i></a>
+			<a href="index.html" class="btn btn-default" style="font-size: 1.1em;"><i class="fas fa-home"></i></a>
 		</div>
 		<div class="col-sm-8 text-center">
 			<h1>LISTADO DE VEHÍCULOS NUEVOS</h1>
@@ -3804,16 +3800,20 @@ $(document).ready(function() {
 	<div class="footer">
 		<div class="row">
 			<div class="col-sm-6 text-left">
-				<p>Software diseñado y desarrollado por Caweb.gt</p>
+				<p>Software diseñado y desarrollado por FalconX</p>
 			</div>
 			<div class="col-sm-6 text-right">
-				<p>Licencia 2024 | Super Autos Jack, Guatemala</p>
-			</div>
+				<p id="Info-empresa"></p>
+			</div>						
 		</div>
 	</div>
 </footer>
 
-<script>	
+<script>
+	const year = new Date().getFullYear();
+	const paragraph = document.querySelector("#Info-empresa");
+	paragraph.innerHTML= "Licencia " + year +" | JP Motors, Guatemala";
+
 	$(function () {
 		$('[data-toggle="popover"]').popover()
 	})

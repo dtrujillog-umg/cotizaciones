@@ -89,7 +89,7 @@ div.logo img{
 	max-height: 70px;
 }
 
-/* SECCIÃ“N MENU PRINCIPAL */
+/* SECCIÓN MENU PRINCIPAL */
 header{
 	display: block;
 	position: relative;
@@ -210,20 +210,27 @@ section.two-modulos div.table div p{
 	transition: background-size 0.3s ease-in;
 	cursor: pointer;
 }
-.modulo-usados{
-	background: url("../images/modulos/usados.jpg");
-	background-position: center;
-	background-size: 100%; 
-	-webkit-transition: background-size 0.3s ease-in;
-	transition: background-size 0.3s ease-in;
-	cursor: pointer;
+.modulo-nuevos-titulo{
+	font-size: xx-large;
+	font-weight: 900;
+	font: bold;
+	text-align: center;
+	color: red;
+	text-transform: uppercase;
 }
-.modulo-usados:hover,
+.modulo-nuevos-descripcion{
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	font-style: italic;
+	font-size: large;
+	font-weight: 800;
+}
+
 .modulo-nuevos:hover{
 	background-size: 110%; 
 }
-.modulo-nuevos i,
-.modulo-usados i{
+.modulo-nuevos i{
 	margin-top: 20px;
 	font-size: 38px;
 }
@@ -268,6 +275,53 @@ footer div.siguenos span{
 footer div.siguenos span:hover{
 	color: #FE0132;
 	cursor: pointer;
+}
+
+/* SECCIÓN NOSOTROS */
+.nosotros{
+	height: 350px;
+}
+.imagen-sobre-nosotros {
+	background-image: url('/Frontend/Images/Sobre-Nosotros.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+	height: 55rem;
+    width: 100%;
+}
+.modulo-sobre-nosotros p,
+.modulo-sobre-nosotros h1{
+	font-size: large;
+	color: white;
+}
+.modulo-sobre-nosotros{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.modulo-nosotros-objetivo{
+	background: url("../images/objetivo.jpeg");
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-transition: background-size 0.3s ease-in;
+	transition: background-size 0.3s ease-in;
+}
+.modulo-nosotros-mision{
+	background: url("../images/mision.png");
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-transition: background-size 0.3s ease-in;
+	transition: background-size 0.3s ease-in;
+}
+.modulo-nosotros-vision{
+	background: url("../images/vision.png");
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-transition: background-size 0.3s ease-in;
+	transition: background-size 0.3s ease-in;
 }
 
 

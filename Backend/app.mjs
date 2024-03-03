@@ -5,6 +5,7 @@ import db from './database.mjs';
 import empleadosRouter from './empleados.mjs';
 import estadoRouter from './Estado.mjs';
 import loginRouter from './login.mjs';
+import vehiculosRouter from './Vehiculos.mjs';
 
 const app = express();
 const PORT = 4000;
@@ -24,6 +25,9 @@ app.use('/Estado', estadoRouter);
 
 // Rutas para los inicios de sesión
 app.use('/login', loginRouter);
+
+// Rutas para los vehiculos
+app.use('/vehiculos', vehiculosRouter);
 
 // Iniciar el servidor
 app.listen(PORT, function() {

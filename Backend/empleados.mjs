@@ -7,7 +7,7 @@ router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 // Obtener todos los empleados
-router.get('/', async function(req, res) {
+router.get("/", async function (req, res) {
   try {
     const sql = `
       SELECT 
@@ -28,31 +28,34 @@ router.get('/', async function(req, res) {
     const results = await query(sql); // Aquí cambiamos 'query' a 'sql'
     res.json(results);
   } catch (error) {
-    console.error('Error al obtener empleados:', error);
-    res.status(500).send('Error interno del servidor');
+    console.error("Error al obtener empleados:", error);
+    res.status(500).send("Error interno del servidor");
   }
 });
 
 // Obtener un empleado por su ID
-router.get('/:id', async function(req, res) {
+router.get("/:id", async function (req, res) {
   const id = req.params.id;
   try {
-    const results = await query('SELECT * FROM Empleados WHERE EmpleadoID = ?', [id]); // Cambio aquí
+    const results = await query(
+      "SELECT * FROM Empleados WHERE EmpleadoID = ?",
+      [id]
+    ); // Cambio aquí
     if (results.length === 0) {
       // Si no se encuentra ningún empleado con el ID dado, devolver un mensaje de error
-      res.status(404).send('Empleado no encontrado');
+      res.status(404).send("Empleado no encontrado");
       return;
     }
     // Si se encuentra el empleado, devolverlo como respuesta
     res.json(results[0]);
   } catch (error) {
-    console.error('Error al obtener el empleado:', error);
-    res.status(500).send('Error interno del servidor');
+    console.error("Error al obtener el empleado:", error);
+    res.status(500).send("Error interno del servidor");
   }
 });
 
 // Agregar un nuevo empleado
-router.post('/', async function(req, res) {
+router.post("/", async function (req, res) {
   const empleado = req.body;
   try {
       // Hashear la contraseña antes de insertar el empleado
@@ -68,27 +71,32 @@ router.post('/', async function(req, res) {
 });
 
 // Actualizar un empleado existente
-router.put('/:id', async function(req, res) {
+router.put("/:id", async function (req, res) {
   const id = req.params.id;
   const empleado = req.body;
   try {
-    const results = await query('UPDATE Empleados SET ? WHERE EmpleadoID = ?', [empleado, id]);
-    res.json({ message: 'Empleado actualizado con éxito', empleado });
+    const results = await query("UPDATE Empleados SET ? WHERE EmpleadoID = ?", [
+      empleado,
+      id,
+    ]);
+    res.json({ message: "Empleado actualizado con éxito", empleado });
   } catch (error) {
-    console.error('Error al actualizar empleado:', error);
-    res.status(500).send('Error interno del servidor');
+    console.error("Error al actualizar empleado:", error);
+    res.status(500).send("Error interno del servidor");
   }
 });
 
 // Eliminar un empleado
-router.delete('/:id', async function(req, res) {
+router.delete("/:id", async function (req, res) {
   const id = req.params.id;
   try {
-    const results = await query('DELETE FROM Empleados WHERE EmpleadoID = ?', [id]); // Cambio aquí
-    res.json({ message: 'Empleado eliminado con éxito', id });
+    const results = await query("DELETE FROM Empleados WHERE EmpleadoID = ?", [
+      id,
+    ]); // Cambio aquí
+    res.json({ message: "Empleado eliminado con éxito", id });
   } catch (error) {
-    console.error('Error al eliminar empleado:', error);
-    res.status(500).send('Error interno del servidor');
+    console.error("Error al eliminar empleado:", error);
+    res.status(500).send("Error interno del servidor");
   }
 });
 

@@ -1,5 +1,6 @@
 import express from 'express';
 import { query } from './database.mjs';
+import bcrypt from 'bcrypt';
 
 const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
@@ -54,11 +55,15 @@ router.get('/:id', async function(req, res) {
 router.post('/', async function(req, res) {
   const empleado = req.body;
   try {
-    const results = await query('INSERT INTO Empleados SET ?', [empleado]); // Cambio aquí
-    res.json({ message: 'Empleado agregado con éxito', empleado });
+      // Hashear la contraseña antes de insertar el empleado
+      const salt = await bcrypt.genSalt(10);
+      empleado.ContrasenaHash = await bcrypt.hash(empleado.ContrasenaHash, salt);
+
+      const results = await query('INSERT INTO Empleados SET ?', [empleado]); // Cambio aquí
+      res.json({ message: 'Empleado agregado con éxito', empleado });
   } catch (error) {
-    console.error('Error al agregar empleado:', error);
-    res.status(500).send('Error interno del servidor');
+      console.error('Error al agregar empleado:', error);
+      res.status(500).send('Error interno del servidor');
   }
 });
 

@@ -29,7 +29,6 @@ app.use('/login', loginRouter);
 // Rutas para los vehiculos
 app.use('/vehiculos', vehiculosRouter);
 
-
 // Iniciar el servidor
 app.listen(PORT, function() {
   console.log('Servidor escuchando en el puerto ' + PORT);

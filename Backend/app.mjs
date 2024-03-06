@@ -1,11 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import db from './database.mjs';
 import empleadosRouter from './empleados.mjs';
 import estadoRouter from './Estado.mjs';
 import loginRouter from './login.mjs';
 import vehiculosRouter from './Vehiculos.mjs';
+import marcasRouter from './marcas.mjs';
 
 const app = express();
 const PORT = 4000;
@@ -28,6 +28,9 @@ app.use('/login', loginRouter);
 
 // Rutas para los vehiculos
 app.use('/vehiculos', vehiculosRouter);
+
+// Rutas para los vehiculos
+app.use('/marcas', marcasRouter);
 
 // Iniciar el servidor
 app.listen(PORT, function() {

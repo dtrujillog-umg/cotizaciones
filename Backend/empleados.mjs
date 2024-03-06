@@ -25,7 +25,7 @@ router.get("/", async function (req, res) {
       INNER JOIN 
           Estado ES ON E.Estado = ES.EstadoID
     `;
-    const results = await query(sql); // Aquí cambiamos 'query' a 'sql'
+    const results = await query(sql);   
     res.json(results);
   } catch (error) {
     console.error("Error al obtener empleados:", error);
@@ -60,10 +60,11 @@ router.post("/", async function (req, res) {
   try {
       // Hashear la contraseña antes de insertar el empleado
       const salt = await bcrypt.genSalt(10);
+      empleado.Usuario = empleado.Usuario.toLowerCase();
       empleado.ContrasenaHash = await bcrypt.hash(empleado.ContrasenaHash, salt);
 
-      const results = await query('INSERT INTO Empleados SET ?', [empleado]); // Cambio aquí
-      res.json({ message: 'Empleado agregado con éxito', empleado });
+      const results = await query('INSERT INTO Empleados SET ?', [empleado]);
+      res.json({ message: 'Empleado agregado con éxito', results });
   } catch (error) {
       console.error('Error al agregar empleado:', error);
       res.status(500).send('Error interno del servidor');
@@ -74,12 +75,19 @@ router.post("/", async function (req, res) {
 router.put("/:id", async function (req, res) {
   const id = req.params.id;
   const empleado = req.body;
-  try {
+  try {    
+    // Hashear la contraseña antes de insertar el empleado
+    if (empleado.ContrasenaHash) {
+      const salt = await bcrypt.genSalt(10);
+      empleado.Usuario = empleado.Usuario.toLowerCase();
+      empleado.ContrasenaHash = await bcrypt.hash(empleado.ContrasenaHash, salt);
+    }
+
     const results = await query("UPDATE Empleados SET ? WHERE EmpleadoID = ?", [
       empleado,
       id,
     ]);
-    res.json({ message: "Empleado actualizado con éxito", empleado });
+    res.json({ message: "Empleado actualizado con éxito", results });
   } catch (error) {
     console.error("Error al actualizar empleado:", error);
     res.status(500).send("Error interno del servidor");
@@ -92,7 +100,7 @@ router.delete("/:id", async function (req, res) {
   try {
     const results = await query("DELETE FROM Empleados WHERE EmpleadoID = ?", [
       id,
-    ]); // Cambio aquí
+    ]);
     res.json({ message: "Empleado eliminado con éxito", id });
   } catch (error) {
     console.error("Error al eliminar empleado:", error);

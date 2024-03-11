@@ -186,7 +186,7 @@
             data.forEach(vehiculo => {                
                 const vehiculoHTML = `
                     <div class="col-md-4 col-xs-12">
-                                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=${vehiculo.codigo}', '_self');">
+                                <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=${vehiculo.VehiculoID}', '_self');">
                                     <div class="imagen-auto" style="background-image: url('./Images/nuevos/${vehiculo.Imagen}'); background-size: cover; background-position: center !important;"></div>
                                     <div class="texto">
                                         <h3>${vehiculo.Modelo}</h3>
@@ -307,7 +307,7 @@ $(document).ready(function(){
                     data.forEach(vehiculo => {
                         const vehiculoHTML = `
                         <div class="col-md-4 col-xs-12">
-                            <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=${vehiculo.codigo}', '_self');">
+                            <div class="auto-nuevo" onclick="window.open('auto-nuevo.html?codigo=${vehiculo.vehiculoID}', '_self');">
                                 <div class="imagen-auto" style="background-image: url('./Images/nuevos/${vehiculo.Imagen}'); background-size: cover; background-position: center !important;"></div>
                                 <div class="texto">
                                     <h3>${vehiculo.Modelo}</h3>

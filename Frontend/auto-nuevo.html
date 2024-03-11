@@ -15,8 +15,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/slide.css">
     
-    <title>BMW X1 sDrive18i Deluxe | Jp Motors, Guatemala</title>
-    <meta name="description" content="En Jp Motors ponemos a su disposición nuestra experiencia de 42 años asesorando a clientes en la compra de vehículos nuevos, ofreciendo las mejores opciones financieras del mercado y la tranquilidad de contar con todo nuestro respaldo."/>
+    <meta name="description" content="En Jp Motors ponemos a su disposición nuestra experiencia asesorando a clientes en la compra de vehículos nuevos, ofreciendo las mejores opciones financieras del mercado y la tranquilidad de contar con todo nuestro respaldo."/>
     <!-- SHARE FACEBOOK -->
     <meta property="og:url"           content="https://www.superautosjack.com.gt/auto-nuevo?codigo=-1224926" />
     <meta property="og:type"          content="website" />
@@ -25,9 +24,15 @@
     <meta property="og:image"         content="https://www.superautosjack.com.gt/upload/files/medium/X1 (1).jpg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
+
+    <!-- scripts carga de vehiculos -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./js/listado.js"></script>
+    <title id="modelo"></title>
+
 </head>
 <body>
-    
+    <!-- navbar -->
     <header class="no-print">
 	<div class="content">
 	<div class="row header">
@@ -56,12 +61,14 @@
 	</div>
 	</div>
 </header>
-
+<!-- loading -->
 <div id="preloader">
    	<div id="loader">
  		<p>Cargando...</p>
    	</div>
 </div>    
+<!-- boton retorno -->
+
     <section class="sub-header autos-nuevos no-print">
         <div class="bg-black">
             <div class="col-md- hidden-xs" style="position: absolute; margin-top: 20px; margin-left: 8px;">
@@ -69,7 +76,7 @@
             </div>
 
             <div class="content text-center">
-                <h1><strong>BMW X1 sDrive18i Deluxe</strong></h1>
+                <h1> <p id="marca"></p></h1>
             </div>
         </div>
     </section>
@@ -91,18 +98,20 @@
 
 
         <div class="row" style="max-width: 90%;  margin: 0 auto; padding-top: 20px;">
-            <div class="col-md-4" style="padding-top: 50px; "><h1 style="font-weight: bold;">BMW X1 sDrive18i Deluxe</h1>
+            <div class="col-md-4" style="padding-top: 50px; "><h1 style="font-weight: bold;" id="marca"></h1>
+                <h1 style="font-weight: bold;" id="anio"></h1>
+                <p id="modelo"></p>
                 <h2>Código: -1224926</h2>
                 <hr style="background-color: #ea012e; height: 4px;">
             </div>
             <div class="col-md-8">
-                <img src="upload/files/medium/X1 (1).jpg" class="img-responsive"></div>
+                <img id="imagen" class="img-responsive"></div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
                 <img src="images/nuevos/Rubro_C.jpg" class="img-responsive">
                 <div class="experto">
-                En Jp Motors ponemos a su disposición nuestra experiencia de 42 años asesorando a clientes en la compra de vehículos nuevos, ofreciendo las mejores opciones financieras del mercado y la tranquilidad de contar con todo nuestro respaldo.                </div>
+                En Jp Motors ponemos a su disposición nuestra experiencia  asesorando a clientes en la compra de vehículos nuevos, ofreciendo las mejores opciones financieras del mercado y la tranquilidad de contar con todo nuestro respaldo.                </div>
             </div>
             <div class="col-md-12">
                 <img src="images/nuevos/Rubro_1.jpg" class="img-responsive">

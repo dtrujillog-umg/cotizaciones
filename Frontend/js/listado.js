@@ -8,19 +8,22 @@ $(document).ready(function() {
         url: `http://localhost:4000/vehiculos/${codigo}`,
         method: 'GET',
         success: function(data) {
+            console.log(data)
             // Asignar los datos del vehículo a los elementos HTML
-            $('#modelo').text(`Modelo: ${data.Modelo}`);
-            $('#marca').text(`Marca: ${data.Marca}`);
-            $('#anio').text(`Año: ${data.Anio}`);
-            $('#precioGerente').text(`Precio Gerente: ${data.PrecioGerente}`);
-            $('#precioWeb').text(`Precio Web: ${data.PresioWeb}`);
-            $('#precioLista').text(`Precio Lista: ${data.PrecioLista}`);
-            // $('#imagen').attr('src', data.Imagen);
+            $('.codigo').text(`Codigo:  ${data.VehiculoID}`);
+           
+            $('.modelo').text(`${data.Modelo}`);
+            $('.marca').text(`${data.Marca}`);
+            $('.anio').text(` ${data.Anio}`);
+            // $('.precioGerente').text(`Precio Gerente: ${data.PrecioGerente}`);
+            // $('.precioWeb').text(`Precio Web: ${data.PresioWeb}`);
+            // $('.precioLista').text(`Precio Lista: ${data.PrecioLista}`);
+            // $('.imagen').attr('src', data.Imagen);
             $('#imagen').attr('src', './images/nuevos/' + data.Imagen);
 
         },
         error: function() {
-            $('#detalleVehiculo').html('<p>Error al cargar los detalles del vehículo</p>');
+            $('.detalleVehiculo').html('<p>Error al cargar los detalles del vehículo</p>');
         }
     });
 });

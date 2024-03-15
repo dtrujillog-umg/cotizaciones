@@ -1,0 +1,143 @@
+Motor
+SeguridadVehiculo
+Interior
+Exterior
+SeguridadVehiculo
+VehiculoDimCap
+Garantia
+
+Tabla: Motor
+MotorID	int(11)	NO	PRI		auto_increment
+VehiculoID	int(11)	YES	MUL		
+Tipo	varchar(255)	YES			
+Cilindros	varchar(255)	YES			
+Cilindrada	varchar(255)	YES			
+Servotronic	varchar(255)	YES			
+TipoMotor	varchar(255)	YES			
+Combustible	varchar(255)	YES			
+DetallesCilindros	varchar(255)	YES			
+FuncionECO	varchar(255)	YES			
+FuncionAutoStartStop	varchar(255)	YES			
+FrenoEstacionamiento	varchar(255)	YES			
+SistemaTraccion	varchar(255)	YES			
+CajaCambios	varchar(255)	YES			
+HP	varchar(255)	YES			
+Torque	varchar(255)	YES			
+Aceleracion0_100	varchar(255)	YES			
+
+Tabla SeguridadVehiculo
+SeguridadID	int(11)	NO	PRI		auto_increment
+VehiculoID	int(11)	YES	MUL		
+Asistente_Manejo	varchar(255)	YES			
+Frenos_Ventilados	varchar(255)	YES			
+Airbags_Laterales	varchar(255)	YES			
+Cierre_Central	varchar(255)	YES			
+Dispositivo_Alarma	varchar(255)	YES			
+Interruptor_Bateria	varchar(255)	YES			
+Rueda_Repuesto	varchar(255)	YES			
+Botiquin_Primeros_Auxilios	varchar(255)	YES			
+Barras_Proteccion_Lateral	varchar(255)	YES			
+Llanta_Repuesto	varchar(255)	YES			
+Control_Dinamico_Estabilidad	varchar(255)	YES			
+Sistema_ABS	varchar(255)	YES			
+Sensor_Colision	varchar(255)	YES			
+Reposacabezas_Regulables	varchar(255)	YES			
+Control_Airbag	varchar(255)	YES			
+Performance_Control	varchar(255)	YES			
+Union_ISOFIX	varchar(255)	YES			
+Pernos_Antirobo	varchar(255)	YES			
+TAbla Interior;
+
+Tabla Interior ;
+InteriorID	int(11)	NO	PRI		auto_increment
+VehiculoID	int(11)	YES	MUL		
+Control_Crucero_Frenado	varchar(255)	YES			
+Preparacion_Apple_CarPlay	varchar(255)	YES			
+Alfombras_Velours	varchar(255)	YES			
+Asientos_Traseros_Abatibles	varchar(255)	YES			
+Boton_Arranque_Encendido	varchar(255)	YES			
+Retrovisor_Interior_Ajuste_Automatico	varchar(255)	YES			
+Volante_Multifuncion	varchar(255)	YES			
+Aire_Acondicionado_Regulacion_Zonas	varchar(255)	YES			
+Reglaje_Electrico_Asientos_Conductor_Memoria	varchar(255)	YES			
+Computadora_Abordo	varchar(255)	YES			
+Apoya_Cabezas_Traseros	varchar(255)	YES			
+Molduras_Interiores_Negras	varchar(255)	YES			
+Paquete_Compartimentos	varchar(255)	YES			
+Asientos_Deportivos_Conductor_Acompanante	varchar(255)	YES			
+Vidrios_Electricos_Apertura_Cierre_Automatico	varchar(255)	YES			
+Apoyabrazos_Delantero	varchar(255)	YES			
+Toma_Corriente_12V	varchar(255)	YES			
+Access_Comfort	varchar(255)	YES			
+Interfaz_USB	varchar(255)	YES			
+iDrive_Controller	varchar(255)	YES			
+Luces_Bienvenida	varchar(255)	YES			
+Asiento_Acompanante_Ajuste_Altura	varchar(255)	YES			
+Cargador_Inalambrico_Celular	varchar(255)	YES			
+Panel_Instrumentos_Lujo	varchar(255)	YES			
+Pantalla_Panoramica	varchar(255)	YES			
+Pantalla_Panoramica_Interior_10_25_Pulgadas	varchar(255)	YES			
+Pantalla_CID_Display_10_7_Pulgadas	varchar(255)	YES			
+Sistema_Altavoces_Stereo_6_Altavoces	varchar(255)	YES			
+Tapiceria_Cuero_Vegano_Veganza_Perforated	varchar(255)	YES			
+BMW_Live_Cockpit_Professional	varchar(255)	YES			
+
+Tabla Exterior
+
+ExteriorID	int(11)	NO	PRI		auto_increment
+VehiculoID	int(11)	YES	MUL		
+Sistema_Iluminacion_Exterior	varchar(255)	YES			
+Espejos_Retrovisores_Ajuste_Automatico_Anti_Deslumbramiento	varchar(255)	YES			
+Carriles_Longitudinales_Aluminio_Satinado	varchar(255)	YES			
+Camara_Marcha_Atras	varchar(255)	YES			
+Faros_LED_Adaptativos	varchar(255)	YES			
+Tubo_Terminal_Escape_Visible_Round	varchar(255)	YES			
+Asistente_Luz_Carretera	varchar(255)	YES			
+Calefaccion_Vidrio_Trasero	varchar(255)	YES			
+Apertura_Puerta_Trasera_Automatica	varchar(255)	YES			
+Sensor_Lluvia_Accionamiento_Automatico_Luces	varchar(255)	YES			
+Asistente_Aparcamiento	varchar(255)	YES			
+
+TAbla SeguridadVehiculo
+
+SeguridadID	int(11)	NO	PRI		auto_increment
+VehiculoID	int(11)	YES	MUL		
+Asistente_Manejo	varchar(255)	YES			
+Frenos_Ventilados	varchar(255)	YES			
+Airbags_Laterales	varchar(255)	YES			
+Cierre_Central	varchar(255)	YES			
+Dispositivo_Alarma	varchar(255)	YES			
+Interruptor_Bateria	varchar(255)	YES			
+Rueda_Repuesto	varchar(255)	YES			
+Botiquin_Primeros_Auxilios	varchar(255)	YES			
+Barras_Proteccion_Lateral	varchar(255)	YES			
+Llanta_Repuesto	varchar(255)	YES			
+Control_Dinamico_Estabilidad	varchar(255)	YES			
+Sistema_ABS	varchar(255)	YES			
+Sensor_Colision	varchar(255)	YES			
+Reposacabezas_Regulables	varchar(255)	YES			
+Control_Airbag	varchar(255)	YES			
+Performance_Control	varchar(255)	YES			
+Union_ISOFIX	varchar(255)	YES			
+Pernos_Antirobo	varchar(255)	YES			
+
+Tabla VehiculoDimCap
+
+VehiculoID	int(11)	YES	MUL		
+Longitud	varchar(50)	YES			
+Anchura	varchar(50)	YES			
+Altura	varchar(50)	YES			
+Peso	varchar(50)	YES			
+CapCarga	varchar(50)	YES			
+CapTanque	varchar(50)	YES			
+ConsumoComb	varchar(50)	YES			
+CapPasajeros	varchar(50)	YES			
+Llantas	varchar(255)	YES			
+
+Tabla: Garantia
+
+GarantiaID	int(11)	NO	PRI		auto_increment
+VehiculoID	int(11)	YES	MUL		
+Duracion	varchar(255)	YES			
+Condiciones	varchar(255)	YES			
+

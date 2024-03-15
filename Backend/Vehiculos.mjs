@@ -157,5 +157,40 @@ vehiculosRouter.put("/:id", upload.single('Imagen'), async function (req, res) {
 });
 
 
+//detalle de vehiculos
+
+vehiculosRouter.get("/detalle/:id", async function (req, res) {
+  const id = req.params.id;
+  try {
+    const results = await query("CALL ConsultaCompletaPorID(?)", [id]);
+    if (results.length === 0) {
+      res.status(404).send("Vehiculo no encontrado");
+      return;
+    }
+    // Ajustar la respuesta para enviar solo el objeto del vehículo
+    res.json(results[0]);
+  } catch (error) {
+    console.error("Error al obtener el Vehiculo:", error);
+    res.status(500).send("Error interno del servidor");
+  }
+});
+
+
+
+
+
+// vehiculosRouter.get("/detalle/:id", async function(req,res){
+//   try{
+//       const vehiculoId = req.params.id;
+//       const sql="CALL ConsultaCompletaPorID(?)";
+//       const results = await query(sql,[vehiculoId]);
+//       res.json(results.length === 0);
+//   }catch(error){
+//       console.error("Error al obtener vehiculo por ID: ",error);
+//       res.status(500).send("errror interno del servidor");
+//   }
+// })
+
+
 // Exporta el enrutador de vehículos como objeto predeterminado
 export default vehiculosRouter;
